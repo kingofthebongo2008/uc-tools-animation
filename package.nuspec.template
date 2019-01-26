@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>uc-tools-model</id>
+    <id>uc-tools-animation</id>
     <version>@version</version>
-    <title>uc-tools-model</title>
+    <title>uc-tools-animation</title>
     <authors>Stefan Dyulgerov</authors>
     <owners>kingofthebongo2009</owners>
     <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
