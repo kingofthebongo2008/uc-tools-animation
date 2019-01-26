@@ -4,10 +4,8 @@
 #include <tuple>
 #include <unordered_set>
 
-#include <uc_dev/gx/lip/animation.h>
-#include <uc_dev/gx/import/anm/animation.h>
-#include <uc_dev/fnd/string_hash.h>
-
+#include <uc/gx/lip/animation.h>
+#include <uc/import/anm/animation.h>
 
 namespace uc
 {

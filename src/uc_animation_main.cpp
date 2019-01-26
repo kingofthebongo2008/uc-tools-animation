@@ -5,27 +5,18 @@
 #include <cstdint>
 #include <iostream>
 
-#include <uc_dev/gx/import/anm/animation.h>
-#include <uc_dev/gx/import/assimp/animation.h>
-#include <uc_dev/gx/import/assimp/assimp_options.h>
-#include <uc_dev/gx/import/assimp/skinned_mesh.h>
-#include <uc_dev/lzham/lzham_compressor.h>
+#include <uc/import/anm/animation.h>
+#include <uc/lzham/lzham_compressor.h>
 
 #include "uc_animation_command_line.h"
 #include "uc_animation_options.h"
 #include "uc_animation_lip.h"
 #include "uc_animation_animation.h"
 
-#include <uc_dev/gx/import/fbx/animation.h>
+#include <uc/import/fbx/animation.h>
+#include <experimental/filesystem>
 
 
-namespace uc
-{
-    namespace animation
-    {
-
-    }
-}
 
 inline std::ostream& operator<<(std::ostream& s, const std::string& str)
 {
@@ -35,13 +26,7 @@ inline std::ostream& operator<<(std::ostream& s, const std::string& str)
 
 inline std::string get_environment()
 {
-    #if defined(_X86)
-        return "x86";
-    #endif
-
-    #if defined(_X64)
-        return "x64";
-    #endif
+    return "x64";
 }
 
 
@@ -75,11 +60,6 @@ int32_t main(int32_t argc, const char* argv[])
     
         auto make_left_handed = get_make_left_handed(vm);
 
-        uint32_t ai_o = 0;
-        ai_o |= make_left_handed ? aiProcess_MakeLeftHanded : 0;
-        ai_o |= aiProcess_CalcTangentSpace; //
-        std::cout << "assimp options:" << uc::gx::import::assimp::assimp_postprocess_option_to_string(ai_o) << std::endl;
-
         std::experimental::filesystem::path path(input_animation);
         auto e = path.extension().wstring();
 
@@ -87,11 +67,7 @@ int32_t main(int32_t argc, const char* argv[])
 
         if (e == L".fbx")
         {
-            animations = uc::gx::import::fbx::create_animations(input_animation);
-        }
-        else
-        {
-            animations = uc::gx::import::assimp::create_animations_from_assimp(input_animation, ai_o);
+            animations = uc::gx::import::fbx::animation::create_animations(input_animation);
         }
 
         {
