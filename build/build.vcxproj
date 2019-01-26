@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="packages\uc-math.1.0.4\build\native\uc-math.props" Condition="Exists('packages\uc-math.1.0.4\build\native\uc-math.props')" />
-  <Import Project="packages\uc-imaging.1.0.12\build\native\uc-imaging.props" Condition="Exists('packages\uc-imaging.1.0.12\build\native\uc-imaging.props')" />
-  <Import Project="packages\amd-compressonator-2-3-0.2.3.3\build\native\amd-compressonator-2-3-0.props" Condition="Exists('packages\amd-compressonator-2-3-0.2.3.3\build\native\amd-compressonator-2-3-0.props')" />
-  <Import Project="packages\uc-texture.1.0.2\build\native\uc-texture.props" Condition="Exists('packages\uc-texture.1.0.2\build\native\uc-texture.props')" />
   <Import Project="packages\uc-tools-import.1.0.5\build\native\uc-tools-import.props" Condition="Exists('packages\uc-tools-import.1.0.5\build\native\uc-tools-import.props')" />
   <Import Project="packages\fbxsdk-2018-1-1-dll.2018.1.1\build\fbxsdk-2018-1-1-dll.props" Condition="Exists('packages\fbxsdk-2018-1-1-dll.2018.1.1\build\fbxsdk-2018-1-1-dll.props')" />
   <Import Project="packages\uc-serialization.1.0.36\build\native\uc-serialization.props" Condition="Exists('packages\uc-serialization.1.0.36\build\native\uc-serialization.props')" />
@@ -47,9 +44,6 @@
     <Import Project="packages\uc-serialization.1.0.36\build\native\uc-serialization.targets" Condition="Exists('packages\uc-serialization.1.0.36\build\native\uc-serialization.targets')" />
     <Import Project="packages\fbxsdk-2018-1-1-dll.2018.1.1\build\fbxsdk-2018-1-1-dll.targets" Condition="Exists('packages\fbxsdk-2018-1-1-dll.2018.1.1\build\fbxsdk-2018-1-1-dll.targets')" />
     <Import Project="packages\uc-tools-import.1.0.5\build\native\uc-tools-import.targets" Condition="Exists('packages\uc-tools-import.1.0.5\build\native\uc-tools-import.targets')" />
-    <Import Project="packages\uc-texture.1.0.2\build\native\uc-texture.targets" Condition="Exists('packages\uc-texture.1.0.2\build\native\uc-texture.targets')" />
-    <Import Project="packages\amd-compressonator-2-3-0.2.3.3\build\native\amd-compressonator-2-3-0.targets" Condition="Exists('packages\amd-compressonator-2-3-0.2.3.3\build\native\amd-compressonator-2-3-0.targets')" />
-    <Import Project="packages\uc-imaging.1.0.12\build\native\uc-imaging.targets" Condition="Exists('packages\uc-imaging.1.0.12\build\native\uc-imaging.targets')" />
     <Import Project="packages\uc-math.1.0.4\build\native\uc-math.targets" Condition="Exists('packages\uc-math.1.0.4\build\native\uc-math.targets')" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -122,12 +116,6 @@
     <Error Condition="!Exists('packages\fbxsdk-2018-1-1-dll.2018.1.1\build\fbxsdk-2018-1-1-dll.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\fbxsdk-2018-1-1-dll.2018.1.1\build\fbxsdk-2018-1-1-dll.targets'))" />
     <Error Condition="!Exists('packages\uc-tools-import.1.0.5\build\native\uc-tools-import.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-tools-import.1.0.5\build\native\uc-tools-import.props'))" />
     <Error Condition="!Exists('packages\uc-tools-import.1.0.5\build\native\uc-tools-import.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-tools-import.1.0.5\build\native\uc-tools-import.targets'))" />
-    <Error Condition="!Exists('packages\uc-texture.1.0.2\build\native\uc-texture.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-texture.1.0.2\build\native\uc-texture.props'))" />
-    <Error Condition="!Exists('packages\uc-texture.1.0.2\build\native\uc-texture.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-texture.1.0.2\build\native\uc-texture.targets'))" />
-    <Error Condition="!Exists('packages\amd-compressonator-2-3-0.2.3.3\build\native\amd-compressonator-2-3-0.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\amd-compressonator-2-3-0.2.3.3\build\native\amd-compressonator-2-3-0.props'))" />
-    <Error Condition="!Exists('packages\amd-compressonator-2-3-0.2.3.3\build\native\amd-compressonator-2-3-0.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\amd-compressonator-2-3-0.2.3.3\build\native\amd-compressonator-2-3-0.targets'))" />
-    <Error Condition="!Exists('packages\uc-imaging.1.0.12\build\native\uc-imaging.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-imaging.1.0.12\build\native\uc-imaging.props'))" />
-    <Error Condition="!Exists('packages\uc-imaging.1.0.12\build\native\uc-imaging.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-imaging.1.0.12\build\native\uc-imaging.targets'))" />
     <Error Condition="!Exists('packages\uc-math.1.0.4\build\native\uc-math.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-math.1.0.4\build\native\uc-math.props'))" />
     <Error Condition="!Exists('packages\uc-math.1.0.4\build\native\uc-math.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-math.1.0.4\build\native\uc-math.targets'))" />
   </Target>
