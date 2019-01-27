@@ -1,29 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
-
-<ItemGroup>
-<Filter Include = "src"/>
-<Filter Include = "src\pch"/>
-</ItemGroup>
-<ItemGroup>	
-<ClInclude Include = "..\src\pch\pch.h"><Filter>src\pch</Filter></ClInclude>	
-<ClInclude Include = "..\src\pch\targetver.h"><Filter>src\pch</Filter></ClInclude>	
-<ClInclude Include = "..\src\uc_animation_animation.h"><Filter>src</Filter></ClInclude>	
-<ClInclude Include = "..\src\uc_animation_command_line.h"><Filter>src</Filter></ClInclude>	
-<ClInclude Include = "..\src\uc_animation_exception.h"><Filter>src</Filter></ClInclude>	
-<ClInclude Include = "..\src\uc_animation_lip.h"><Filter>src</Filter></ClInclude>	
-<ClInclude Include = "..\src\uc_animation_options.h"><Filter>src</Filter></ClInclude>
-</ItemGroup>
-<ItemGroup>
-<Filter Include = "src"/>
-<Filter Include = "src\pch"/>
-</ItemGroup>
-<ItemGroup>	
-<ClCompile Include = "..\src\pch\pch.cpp"><Filter>src\pch</Filter></ClCompile>
-</ItemGroup>
-<ItemGroup>
-<Filter Include = "src"/>
-</ItemGroup>
-<ItemGroup>	
-<ClCompile Include = "..\src\uc_animation_main.cpp"><Filter>src</Filter></ClCompile>
-</ItemGroup></Project> 
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src" />
+    <Filter Include="src\pch" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\pch\pch.h">
+      <Filter>src\pch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pch\targetver.h">
+      <Filter>src\pch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\uc_animation_animation.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\uc_animation_command_line.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\uc_animation_exception.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\uc_animation_lip.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\uc_animation_options.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src" />
+    <Filter Include="src\pch" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\pch\pch.cpp">
+      <Filter>src\pch</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\uc_animation_main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)..\bin\win-x64\*.dll" />
+    <None Include="$(MSBuildThisFileDirectory)..\bin\win-x64\*.dll" />
+    <None Include="packages.config" />
+    <None Include="$(MSBuildThisFileDirectory)..\bin\win-x64\*.dll" />
+    <None Include="$(MSBuildThisFileDirectory)..\bin\win-x64\*.dll" />
+    <None Include="$(MSBuildThisFileDirectory)..\bin\win-x64\*.dll" />
+    <None Include="$(MSBuildThisFileDirectory)..\bin\win-x64\*.dll" />
+  </ItemGroup>
+</Project>
