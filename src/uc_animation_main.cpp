@@ -16,7 +16,7 @@
 #include <uc/import/fbx/animation.h>
 #include <experimental/filesystem>
 
-
+#include "pch.h"
 
 inline std::ostream& operator<<(std::ostream& s, const std::string& str)
 {
@@ -56,8 +56,8 @@ int32_t main(int32_t argc, const char* argv[])
         auto input_animation    = get_input_animation(vm);
         auto output_animation   = get_output_animation(vm);
 
-        std::cout << "building animation (" << get_environment() << ") " << input_animation << std::endl;
-    
+        std::cout << "building animation input (" << input_animation << ") output ( " << output_animation << " )" << std::endl;
+
         auto make_left_handed = get_make_left_handed(vm);
 
         std::experimental::filesystem::path path(input_animation);
