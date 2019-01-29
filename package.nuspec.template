@@ -18,6 +18,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src = "bin\win-x64\Release\uc-animation.exe" target = "bin" />
+    <file src = "bin\win-x64\Release\*.exe" target = "bin" />
+    <file src = "bin\win-x64\Release\*.dll" target = "bin" />
   </files>
 </package>
