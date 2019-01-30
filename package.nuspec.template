@@ -11,10 +11,10 @@
     <iconUrl>http://www.gravatar.com/avatar/df362936893270e6a1b53807fa90e8fa</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Allows Native C++ Applications to use precompiled lzham</description>
-    <tags>skeleton,unique,uc,creator,pipeline</tags>
+    <tags>native, skeleton, unique, uc, creator, pipeline</tags>
   </metadata>
   <files>
-    <file src = "bin\win-x64\Release\*.exe" target = "bin" />
-    <file src = "bin\win-x64\Release\*.dll" target = "bin" />
+    <file src = "bin\win-x64\Release\*.exe" target = "lib\native" />
+    <file src = "bin\win-x64\Release\*.dll" target = "lib\native" />
   </files>
 </package>
