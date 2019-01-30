@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <UCToolsAnimation Condition="$(UCToolsAnimation) == ''">$(MSBuildThisFileDirectory)..\lib\native\uc-animation.exe</UCToolsAnimation>
+        <UCToolsAnimation Condition="$(UCToolsAnimation) == ''">$(MSBuildThisFileDirectory)..\..\lib\native\uc-animation.exe</UCToolsAnimation>
     </PropertyGroup>
 </Project>
