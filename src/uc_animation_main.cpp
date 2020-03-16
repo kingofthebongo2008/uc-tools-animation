@@ -4,6 +4,7 @@
 
 #include <cstdint>
 #include <iostream>
+#include <filesystem>
 
 #include <uc/import/anm/animation.h>
 #include <uc/lzham/lzham_compressor.h>
@@ -13,8 +14,8 @@
 #include "uc_animation_lip.h"
 #include "uc_animation_animation.h"
 
+
 #include <uc/import/fbx/animation.h>
-#include <experimental/filesystem>
 
 #include "pch.h"
 
@@ -60,7 +61,7 @@ int32_t main(int32_t argc, const char* argv[])
 
         auto make_left_handed = get_make_left_handed(vm);
 
-        std::experimental::filesystem::path path(input_animation);
+        std::filesystem::path path(input_animation);
         auto e = path.extension().wstring();
 
         std::vector<uc::gx::import::anm::joint_animations> animations;
