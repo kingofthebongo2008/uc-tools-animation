@@ -45,14 +45,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)..\bin\win-x64\*.dll" />
-    <None Include="$(MSBuildThisFileDirectory)..\bin\win-x64\*.dll" />
-    <None Include="$(MSBuildThisFileDirectory)..\bin\win-x64\*.dll" />
-    <None Include="$(MSBuildThisFileDirectory)..\bin\win-x64\*.dll" />
-    <None Include="$(MSBuildThisFileDirectory)..\bin\win-x64\*.dll" />
-    <None Include="$(MSBuildThisFileDirectory)..\bin\win-x64\*.dll" />
     <None Include="packages.config" />
-    <None Include="$(MSBuildThisFileDirectory)..\bin\win-x64\*.dll" />
-    <None Include="$(MSBuildThisFileDirectory)..\bin\win-x64\*.dll" />
+    <None Include="packages\fbxsdk-2018-1-1-dll.2018.1.1\bin\win-x64\libfbxsdk.dll" />
   </ItemGroup>
 </Project>

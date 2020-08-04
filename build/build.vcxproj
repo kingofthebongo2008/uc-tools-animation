@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="packages\uc-tools-import.1.0.15\build\native\uc-tools-import.props" Condition="Exists('packages\uc-tools-import.1.0.15\build\native\uc-tools-import.props')" />
-  <Import Project="packages\uc-serialization.1.0.60\build\native\uc-serialization.props" Condition="Exists('packages\uc-serialization.1.0.60\build\native\uc-serialization.props')" />
+  <Import Project="packages\uc-serialization.1.0.62\build\native\uc-serialization.props" Condition="Exists('packages\uc-serialization.1.0.62\build\native\uc-serialization.props')" />
+  <Import Project="packages\lzham-win64.1.0.1\build\lzham-win64.props" Condition="Exists('packages\lzham-win64.1.0.1\build\lzham-win64.props')" />
+  <Import Project="packages\fbxsdk-2020-1-0-dll.1.0.1\build\fbxsdk-2020-1-0-dll.props" Condition="Exists('packages\fbxsdk-2020-1-0-dll.1.0.1\build\fbxsdk-2020-1-0-dll.props')" />
+  <Import Project="packages\uc-tools-import.1.0.17\build\native\uc-tools-import.props" Condition="Exists('packages\uc-tools-import.1.0.17\build\native\uc-tools-import.props')" />
   <Import Project="packages\uc-math.1.0.6\build\native\uc-math.props" Condition="Exists('packages\uc-math.1.0.6\build\native\uc-math.props')" />
   <Import Project="packages\uc-core.1.0.18\build\native\uc-core.props" Condition="Exists('packages\uc-core.1.0.18\build\native\uc-core.props')" />
-  <Import Project="packages\lzham-win64.1.0.0\build\lzham-win64.props" Condition="Exists('packages\lzham-win64.1.0.0\build\lzham-win64.props')" />
-  <Import Project="packages\fbxsdk-2018-1-1-dll.2018.1.1\build\fbxsdk-2018-1-1-dll.props" Condition="Exists('packages\fbxsdk-2018-1-1-dll.2018.1.1\build\fbxsdk-2018-1-1-dll.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Release|x64">
       <Configuration>Release</Configuration>
@@ -35,14 +35,14 @@
   <ImportGroup Label="ExtensionSettings">
     <Import Project="packages\boost.1.68.0.0\build\boost.targets" Condition="Exists('packages\boost.1.68.0.0\build\boost.targets')" />
     <Import Project="packages\boost_program_options-vc141.1.68.0.0\build\boost_program_options-vc141.targets" Condition="Exists('packages\boost_program_options-vc141.1.68.0.0\build\boost_program_options-vc141.targets')" />
-    <Import Project="packages\fbxsdk-2018-1-1-dll.2018.1.1\build\fbxsdk-2018-1-1-dll.targets" Condition="Exists('packages\fbxsdk-2018-1-1-dll.2018.1.1\build\fbxsdk-2018-1-1-dll.targets')" />
-    <Import Project="packages\lzham-win64.1.0.0\build\lzham-win64.targets" Condition="Exists('packages\lzham-win64.1.0.0\build\lzham-win64.targets')" />
     <Import Project="packages\microsoft-gsl-library.1.0.8\build\native\microsoft-gsl-library.targets" Condition="Exists('packages\microsoft-gsl-library.1.0.8\build\native\microsoft-gsl-library.targets')" />
     <Import Project="packages\uc-core.1.0.18\build\native\uc-core.targets" Condition="Exists('packages\uc-core.1.0.18\build\native\uc-core.targets')" />
     <Import Project="packages\uc-lzham-desktop.1.0.10\build\native\uc-lzham-desktop.targets" Condition="Exists('packages\uc-lzham-desktop.1.0.10\build\native\uc-lzham-desktop.targets')" />
     <Import Project="packages\uc-math.1.0.6\build\native\uc-math.targets" Condition="Exists('packages\uc-math.1.0.6\build\native\uc-math.targets')" />
-    <Import Project="packages\uc-serialization.1.0.60\build\native\uc-serialization.targets" Condition="Exists('packages\uc-serialization.1.0.60\build\native\uc-serialization.targets')" />
-    <Import Project="packages\uc-tools-import.1.0.15\build\native\uc-tools-import.targets" Condition="Exists('packages\uc-tools-import.1.0.15\build\native\uc-tools-import.targets')" />
+    <Import Project="packages\uc-tools-import.1.0.17\build\native\uc-tools-import.targets" Condition="Exists('packages\uc-tools-import.1.0.17\build\native\uc-tools-import.targets')" />
+    <Import Project="packages\fbxsdk-2020-1-0-dll.1.0.1\build\fbxsdk-2020-1-0-dll.targets" Condition="Exists('packages\fbxsdk-2020-1-0-dll.1.0.1\build\fbxsdk-2020-1-0-dll.targets')" />
+    <Import Project="packages\lzham-win64.1.0.1\build\lzham-win64.targets" Condition="Exists('packages\lzham-win64.1.0.1\build\lzham-win64.targets')" />
+    <Import Project="packages\uc-serialization.1.0.62\build\native\uc-serialization.targets" Condition="Exists('packages\uc-serialization.1.0.62\build\native\uc-serialization.targets')" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -103,19 +103,19 @@
     </PropertyGroup>
     <Error Condition="!Exists('packages\boost.1.68.0.0\build\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost.1.68.0.0\build\boost.targets'))" />
     <Error Condition="!Exists('packages\boost_program_options-vc141.1.68.0.0\build\boost_program_options-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost_program_options-vc141.1.68.0.0\build\boost_program_options-vc141.targets'))" />
-    <Error Condition="!Exists('packages\fbxsdk-2018-1-1-dll.2018.1.1\build\fbxsdk-2018-1-1-dll.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\fbxsdk-2018-1-1-dll.2018.1.1\build\fbxsdk-2018-1-1-dll.props'))" />
-    <Error Condition="!Exists('packages\fbxsdk-2018-1-1-dll.2018.1.1\build\fbxsdk-2018-1-1-dll.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\fbxsdk-2018-1-1-dll.2018.1.1\build\fbxsdk-2018-1-1-dll.targets'))" />
-    <Error Condition="!Exists('packages\lzham-win64.1.0.0\build\lzham-win64.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\lzham-win64.1.0.0\build\lzham-win64.props'))" />
-    <Error Condition="!Exists('packages\lzham-win64.1.0.0\build\lzham-win64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\lzham-win64.1.0.0\build\lzham-win64.targets'))" />
     <Error Condition="!Exists('packages\microsoft-gsl-library.1.0.8\build\native\microsoft-gsl-library.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\microsoft-gsl-library.1.0.8\build\native\microsoft-gsl-library.targets'))" />
     <Error Condition="!Exists('packages\uc-core.1.0.18\build\native\uc-core.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-core.1.0.18\build\native\uc-core.props'))" />
     <Error Condition="!Exists('packages\uc-core.1.0.18\build\native\uc-core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-core.1.0.18\build\native\uc-core.targets'))" />
     <Error Condition="!Exists('packages\uc-lzham-desktop.1.0.10\build\native\uc-lzham-desktop.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-lzham-desktop.1.0.10\build\native\uc-lzham-desktop.targets'))" />
     <Error Condition="!Exists('packages\uc-math.1.0.6\build\native\uc-math.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-math.1.0.6\build\native\uc-math.props'))" />
     <Error Condition="!Exists('packages\uc-math.1.0.6\build\native\uc-math.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-math.1.0.6\build\native\uc-math.targets'))" />
-    <Error Condition="!Exists('packages\uc-serialization.1.0.60\build\native\uc-serialization.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-serialization.1.0.60\build\native\uc-serialization.props'))" />
-    <Error Condition="!Exists('packages\uc-serialization.1.0.60\build\native\uc-serialization.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-serialization.1.0.60\build\native\uc-serialization.targets'))" />
-    <Error Condition="!Exists('packages\uc-tools-import.1.0.15\build\native\uc-tools-import.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-tools-import.1.0.15\build\native\uc-tools-import.props'))" />
-    <Error Condition="!Exists('packages\uc-tools-import.1.0.15\build\native\uc-tools-import.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-tools-import.1.0.15\build\native\uc-tools-import.targets'))" />
+    <Error Condition="!Exists('packages\uc-tools-import.1.0.17\build\native\uc-tools-import.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-tools-import.1.0.17\build\native\uc-tools-import.props'))" />
+    <Error Condition="!Exists('packages\uc-tools-import.1.0.17\build\native\uc-tools-import.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-tools-import.1.0.17\build\native\uc-tools-import.targets'))" />
+    <Error Condition="!Exists('packages\fbxsdk-2020-1-0-dll.1.0.1\build\fbxsdk-2020-1-0-dll.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\fbxsdk-2020-1-0-dll.1.0.1\build\fbxsdk-2020-1-0-dll.props'))" />
+    <Error Condition="!Exists('packages\fbxsdk-2020-1-0-dll.1.0.1\build\fbxsdk-2020-1-0-dll.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\fbxsdk-2020-1-0-dll.1.0.1\build\fbxsdk-2020-1-0-dll.targets'))" />
+    <Error Condition="!Exists('packages\lzham-win64.1.0.1\build\lzham-win64.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\lzham-win64.1.0.1\build\lzham-win64.props'))" />
+    <Error Condition="!Exists('packages\lzham-win64.1.0.1\build\lzham-win64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\lzham-win64.1.0.1\build\lzham-win64.targets'))" />
+    <Error Condition="!Exists('packages\uc-serialization.1.0.62\build\native\uc-serialization.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-serialization.1.0.62\build\native\uc-serialization.props'))" />
+    <Error Condition="!Exists('packages\uc-serialization.1.0.62\build\native\uc-serialization.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\uc-serialization.1.0.62\build\native\uc-serialization.targets'))" />
   </Target>
 </Project>
